@@ -9,7 +9,7 @@ const app = Vue.createApp({
       if(this.newItem === '') return
       let todo = {
         item: this.newItem,
-        isDone: false
+        isDone: false     // なぜこの記述だけでT/Fが切り替わるのか？
       }
       this.todos.push(todo) // オブジェクトを配列に追加
       this.newItem = ''

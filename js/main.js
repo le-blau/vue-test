@@ -13,6 +13,9 @@ const app = Vue.createApp({
       }
       this.todos.push(todo) // オブジェクトを配列に追加
       this.newItem = ''
+    },
+    deleteItem: function(index) {
+      this.todos.splice(index, 1)
     }
   }
 })

@@ -8,7 +8,8 @@ const app = Vue.createApp({
       // console.log('clicked');
       if(this.newItem === '') return
       let todo = {
-        item: this.newItem
+        item: this.newItem,
+        isDone: false
       }
       this.todos.push(todo) // オブジェクトを配列に追加
       this.newItem = ''

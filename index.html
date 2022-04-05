@@ -8,6 +8,15 @@
   </head>
   <body>
     <div id="app">
+      <p>{{ message }}</p>
+      <p>{{ number + 1 }}</p>
+      <p>{{ message.split('').reverse().join('') }}</p>
+      <p>{{ bool ? 'yes!' : 'noooo' }}</p>
+      <p>{{ bool ? message : '' }}</p>
+
+      <!-- 以下は式ではなく文になってしまうためエラー -->
+      <!-- <p>{{ let x = 1 }}</p> -->
+      <!-- <p>{{ if(bool) {return message} }}</p> -->
     </div>
 
     <script src="https://unpkg.com/vue@3.1.5"></script>

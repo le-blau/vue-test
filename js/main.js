@@ -1,15 +1,15 @@
 const app = Vue.createApp({
   data: () => ({
-    message: 'hello'
+    basePrice: 100
   }),
   computed: {
-    reversedMessage: function() {
-      return this.message.split('').reverse().join('')
-    }
-  },
-  methods: {
-    reversedMessageMethod: function() {
-      return this.message.split('').reverse().join('')
+    taxIncludedPrice:{
+      get: function() {
+        return this.basePrice * 1.1
+      },
+      set: function(value) {
+        return this.basePrice = value / 1.1
+      }
     }
   }
 })
